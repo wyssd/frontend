@@ -1,0 +1,49 @@
+.box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.site {
+    border: 5px solid black;
+    background: pink;
+    height: 200px;
+    width: 500px;
+    margin: 20px;
+    display: flex;
+}
+
+img {
+    width: 250px;
+}
+
+.img {
+    background: black;
+    width: 250px;
+    /* min-width: 50%;
+    max-width: 50%; */
+}
+
+
+.product {
+    background: grey;
+    width: 250px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+#price {
+    font-size: 3em;
+}
+
+#title {
+    font-size: 2em;
+}
+
+#info {
+    font-size: 1.3em;
+}
+
+#stars {
+    font-size: 1em;
+}
