@@ -56,9 +56,12 @@
                                      @rating-selected="setRating"></star-rating>
                     </div>
                     <p>Titel</p>
-                    <input type="text" name="title">
+                    <input type="text" name="title" required="required"/>
                     <p>Text</p>
-                    <input id="textarea" type="textarea" cols="num" rows="num"/>
+                    <input id="textarea" type="textarea" cols="num" rows="num" required="required"/>
+                    <div id="output">
+                        <output/>
+                    </div>
                     <div id="button">
                         <button v-on:click="submit">Send</button>
                     </div>

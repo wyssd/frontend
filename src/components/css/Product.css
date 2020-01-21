@@ -140,12 +140,15 @@ img {
     margin: auto;
 }
 
-#button{
+#button, #output{
     align: center;
     text-align: center;
     margin-top: auto;
     margin-bottom: auto;
     padding-top: 5px;
+}
+#output{
+    color: red;
 }
 
 #rating{

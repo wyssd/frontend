@@ -14,13 +14,19 @@ export default {
             this.dislike += 1;
         },
         submit: function () {
-            axios.post("http://localhost:8080/wyss/rating/", {
-                stars: this.rating,
-                title: document.querySelector("input[type=text]").value,
-                text: document.querySelector("input[type=textarea]").value,
-                thumbUp: 0,
-                thumbDown: 0,
-            })
+            var text = document.querySelector("input[type=text]").value
+            var textarea = document.querySelector("input[type=textarea]").value
+            if (text == "" || textarea == "") {
+                document.querySelector("output").value = "Bitte alle Felder ausfüllen"
+            } else {
+                axios.post("http://localhost:8080/wyss/rating/", {
+                    stars: this.rating,
+                    title: document.querySelector("input[type=text]").value,
+                    text: document.querySelector("input[type=textarea]").value,
+                    thumbUp: 0,
+                    thumbDown: 0,
+                })
+            }
         }
     },
     data: function () {
