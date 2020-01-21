@@ -15,25 +15,3 @@ export default {
             })
     }
 }
-/*
-    const htmlSite = `
-
-`;
-
-    window.onload = function () {
-        console.log('Dokument geladen');
-        fetch('http://localhost:8080/wyss/product', {
-            method: 'GET',
-
-        }).then((result) => {
-            console.log(result, 'result geladen');
-
-            const box = document.getElementsByClassName('box')[0];
-
-            for (let item of result) {
-                //getElemntByID
-
-                box.appendChild()
-            }
-        })
-    }*/

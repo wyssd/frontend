@@ -6,16 +6,15 @@ export default {
     methods: {
         setRating: function (rating) {
             this.rating = rating;
-            //this is for post of the value of stars
         },
-        countLikes: function() {
+        countLikes: function () {
             this.like += 1;
         },
         countDislikes: function () {
             this.dislike += 1;
         },
         submit: function () {
-            axios.post("http://localhost:8080/wyss/rating/",{
+            axios.post("http://localhost:8080/wyss/rating/", {
                 stars: this.rating,
                 title: document.querySelector("input[type=text]").value,
                 text: document.querySelector("input[type=textarea]").value,
@@ -41,19 +40,3 @@ export default {
     },
     components: {ThumbsUpIcon, ThumbsDownIcon}
 }
-
-
-/*
-    Vue.component('starRating', VueStarRating.default)
-
-    new Vue({
-        el: '#rating',
-        methods: {
-            setRating: function (rating) {
-                this.rating = "You have Selected: " + rating + " stars";
-            }
-        },
-        data: {
-            rating: "No Rating Selected",
-        }
-    });*/

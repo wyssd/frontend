@@ -1,9 +1,5 @@
 <template>
     <div>
-        <router-link to="/">Overview</router-link>
-
-        {{$route.params.id }}
-
         <title>Product</title>
 
         <div id="app">
@@ -24,8 +20,10 @@
                         {{product.shortDescription}}
                     </div>
                     <div id="stars">
-                        <star-rating class="starRatings" active-color="black" inactive-color="white" :show-rating="false" :star-size="35"
-                                     @rating-selected="setRating" v-bind:read-only="true" v-bind:rating=product.stars></star-rating>
+                        <star-rating class="starRatings" active-color="black" inactive-color="white"
+                                     :show-rating="false" :star-size="35"
+                                     @rating-selected="setRating" v-bind:read-only="true"
+                                     v-bind:rating=product.stars></star-rating>
                     </div>
                 </div>
             </div>
@@ -53,14 +51,17 @@
                 </div>
                 <div class="text">
                     <div id="rating">
-                        <star-rating class="starRatings" ctive-color="black" inactive-color="white" :show-rating="false"
+                        <star-rating class="starRatings" active-color="black" inactive-color="white"
+                                     :show-rating="false"
                                      @rating-selected="setRating"></star-rating>
                     </div>
                     <p>Titel</p>
                     <input type="text" name="title">
                     <p>Text</p>
                     <input id="textarea" type="textarea" cols="num" rows="num"/>
-                    <button v-on:click="submit">Send</button>
+                    <div id="button">
+                        <button v-on:click="submit">Send</button>
+                    </div>
                 </div>
             </div>
 
@@ -71,8 +72,10 @@
                 </div>
                 <div class="text">
                     <div id="ratedvalue">
-                        <star-rating class="starRatings" active-color="black" inactive-color="white" :show-rating="false"
-                                     @rating-selected="setRating" v-bind:read-only="true" v-bind:rating=product.stars></star-rating>
+                        <star-rating class="starRatings" active-color="black" inactive-color="white"
+                                     :show-rating="false"
+                                     @rating-selected="setRating" v-bind:read-only="true"
+                                     v-bind:rating=product.stars></star-rating>
                     </div>
                 </div>
             </div>

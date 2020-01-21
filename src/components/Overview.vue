@@ -17,8 +17,10 @@
                         {{p.shortDescription}}
                     </div>
                     <div id="stars">
-                        {{p.stars}}
-                        <span>&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+                        <star-rating class="starRatings" active-color="black" inactive-color="white"
+                                     :show-rating="false" :star-size="20"
+                                     @rating-selected="setRating" v-bind:read-only="true"
+                                     v-bind:rating=p.stars></star-rating>
                     </div>
                 </div>
             </router-link>
